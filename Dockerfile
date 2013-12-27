@@ -1,4 +1,4 @@
-FROM inthecloud247/kdocker-ubuntu
+FROM inthecloud247/kdocker-base
 MAINTAINER inthecloud247 "inthecloud247@gmail.com"
 
 ENV LAST_UPDATED 2013-12-26

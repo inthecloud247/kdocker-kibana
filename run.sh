@@ -13,9 +13,10 @@ function (Settings) {
   kibana_index:     "kibana-int",
   modules:          ['histogram','map','pie','table','stringquery','sort',
                     'timepicker','text','fields','hits','dashcontrol',
-                    'column','derivequeries','trends','bettermap'],
-  }
-);
+                    'column','derivequeries','trends','bettermap']
+  });
+});
+
 EOF
 
 nginx -c /etc/nginx/nginx.conf

@@ -1,5 +1,7 @@
-FROM kdocker-ubuntu
+FROM inthecloud247/kdocker-ubuntu
 MAINTAINER inthecloud247 "inthecloud247@gmail.com"
+
+ENV LAST_UPDATED 2013-12-26
 
 # nginx
 RUN apt-get -y install nginx-full
@@ -8,5 +10,6 @@ RUN apt-get -y install nginx-full
 RUN wget --no-check-certificate -O - https://download.elasticsearch.org/kibana/kibana/kibana-3.0.0milestone4.tar.gz | tar -zxv -C /usr/share/nginx/www/ --strip-components=1
 
 EXPOSE 80
+
 ENTRYPOINT ["/usr/sbin/nginx", "-c", "/etc/nginx/nginx.conf", "-g", "daemon off;"]
 CMD ["-h"]
